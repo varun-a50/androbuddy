@@ -40,7 +40,7 @@ class _ProductListState extends State<ProductList> {
             },
             child: Badge(
               label: Text(
-                context.read<CartBloc>().state.products.length.toString(),
+                context.watch<CartBloc>().state.products.length.toString(),
               ),
               child: Icon(Icons.shopping_cart),
             ),
